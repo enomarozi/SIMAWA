@@ -57,6 +57,7 @@ class HomeController extends Controller
     }
     public function logout(){
         Session::flush();
+        echo "hallo";
         return redirect()->route("login");
     }
 
