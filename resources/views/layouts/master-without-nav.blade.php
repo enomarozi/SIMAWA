@@ -10,16 +10,21 @@
     
     <style type="text/css">
         body{
-            margin-top: 200px;
+            margin-top: 150px;
+        }
+        .registration{
+            margin-top: 50px;
         }
         .authentication-bg{
             background-color: #e9ecef;
         }
     </style>
     <body class="authentication-bg">
-        @show
-        @yield('content')
-        @include('layouts.vendor-scripts')
+        <div class="registration">
+            @show
+            @yield('content')
+            @include('layouts.vendor-scripts')
+        </div>
     </body>
 
 </html>

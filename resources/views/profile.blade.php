@@ -22,6 +22,14 @@
           <th scope="row">NIM/NIP</th>
           <td>{{ session()->get('nim') }}</td>
         </tr>
+        <tr>
+          <th scope="row">Prodi</th>
+          <td>{{ session()->get('prodi') }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Jenjang</th>
+          <td>{{ session()->get('jenjang') }}</td>
+        </tr>
       </tbody>
     </table>
   </div>

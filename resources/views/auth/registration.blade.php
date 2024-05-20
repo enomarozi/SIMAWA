@@ -1,9 +1,9 @@
 @extends('layouts.master-without-nav')
 @section('title')
-    @lang('translation.Login')
+    Registration
 @endsection
 @section('content')
-    <div class="account-pages my-5 pt-sm-5">
+    <div class="account-pages my-5 pt-sm-5 registration">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-4 col-lg-6 col-xl-4">
@@ -15,18 +15,30 @@
                                 </a>
                             </div>
                             <div class="p-2 mt-4">
-                                <form method="POST" action="{{ route('loginAction') }}">
+                                <form method="POST" action="{{ route('registrationAction') }}">
                                     @csrf
                                     <div class="mb-3">
-                                        <label class="form-label" for="nim">NIM/Username</label>
-                                        <input type="text" class="form-control" name="nim" placeholder="NIM/Username">
+                                        <!-- <label class="form-label" for="nim">Nama Lengkap</label> -->
+                                        <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap">
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label" for="userpassword">Password</label>
+                                        <!-- <label class="form-label" for="nim">Username</label> -->
+                                        <input type="text" class="form-control" name="nim" placeholder="Username">
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- <label class="form-label" for="email">Email</label> -->
+                                        <input type="email" class="form-control" name="email" placeholder="Email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- <label class="form-label" for="userpassword">Password</label> -->
                                         <input type="password" class="form-control" name="password" placeholder="Password">
                                     </div>
+                                    <div class="mb-3">
+                                        <!-- <label class="form-label" for="userpassword">Confirm Password</label> -->
+                                        <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password">
+                                    </div>
                                     <div class="mt-3 text-end">
-                                        <button class="btn btn-primary w-sm" type="submit" style="background-color: #28a745;">Log In</button>
+                                        <button class="btn btn-primary w-sm" type="submit" style="background-color: #28a745;">Registration</button>
                                     </div>
                                 </form>
                             </div>
