@@ -17,7 +17,7 @@
                     <!-- item-->
                     <a class="dropdown-item" href="{{ route('profile') }}"><i class="uil uil-user-circle font-size-18 align-middle text-muted me-1"></i> <span class="align-middle">Profile</span></a>
                     
-                    <a class="dropdown-item d-block" href="#"><i class="uil uil-cog font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Setting</span></a>
+                    <a class="dropdown-item d-block" href="{{ route('setting') }}"><i class="uil uil-cog font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Setting</span></a>
 
                     <a class="dropdown-item d-block" href="{{ route('logout') }}"><i class="uil-arrow-circle-left font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Logout</span></a>
                 </div>

@@ -18,13 +18,23 @@
                                 <form method="POST" action="{{ route('loginAction') }}">
                                     @csrf
                                     <div class="mb-3">
-                                        <label class="form-label" for="nim">NIM/Username</label>
+                                        <!-- <label class="form-label" for="nim">NIM/Username</label> -->
                                         <input type="text" class="form-control" name="nim" placeholder="NIM/Username">
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label" for="userpassword">Password</label>
+                                        <!-- <label class="form-label" for="userpassword">Password</label> -->
                                         <input type="password" class="form-control" name="password" placeholder="Password">
                                     </div>
+                                    @if(session('success'))
+                                        <div class="alert alert-success">
+                                            {{ session('success') }}
+                                        </div>
+                                    @endif
+                                    @if(session('failed'))
+                                        <div class="alert alert-danger">
+                                            {{ session('failed') }}
+                                        </div>
+                                    @endif
                                     <div class="mt-3 text-end">
                                         <button class="btn btn-primary w-sm" type="submit" style="background-color: #28a745;">Log In</button>
                                     </div>
@@ -32,7 +42,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="mt-5 text-center">
                         <p>©<script>
                             document.write(new Date().getFullYear())
@@ -40,8 +49,9 @@
                     </div>
                 </div>
             </div>
-            <!-- end row -->
+            <!-- end row --->
         </div>
         <!-- end container -->
     </div>
+
 @endsection
